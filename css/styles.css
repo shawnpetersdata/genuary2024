@@ -1,0 +1,122 @@
+:root {
+--lightColor: rgb(237,209,193);
+--darkColor: rgb(41,0,1);
+--accent1: rgb(222,140,155);
+--accent2: rgb(133,100,132);
+--accent3: rgb(227,100,91);
+--javascriptRotation: 0deg;
+}
+
+html {
+    box-sizing: border-box;
+    background-color:var(--lightColor);
+    color:var(--darkColor);
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing:inherit;
+    color:inherit;
+}
+
+nav {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(50px, 1fr));
+    grid-gap: 10px;
+    max-width: 85vw;
+    margin: 0 auto;
+    padding-bottom:0;
+    background-color:var(--accent3);
+}
+
+canvas {
+    margin:0 auto;
+    padding:0;
+}
+
+nav img, nav p {
+    margin:0;
+    text-align: center;
+    font-size: 0.75rem;
+    
+}
+
+.p5Canvas {
+    padding: 0;
+    margin: 10px auto;
+    display:block;
+    width:100%;
+
+}
+
+
+.flipper {
+    width:100%;
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    height:80vh;
+}
+
+.flipper img {
+    width: 300px;
+    display:block;
+    height:auto;
+    margin: 0 auto;
+    border: white solid 20px;
+    box-shadow: 5px 5px 10px 0.01px rgb(100,100,100);
+}
+.polaroid {
+    position:absolute;
+}
+
+.rotated {
+    position:relative;
+    display:block;
+    animation-fill-mode: both;
+}
+figcaption{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    top:-40px;
+    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+
+    
+    font-size:2rem;
+    font-family:Caveat;
+    font-weight:bolder;
+
+    opacity: 75%;
+}
+
+footer{
+    font-size:0.75rem;
+    text-align:center;
+    position:fixed;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+        
+    }
+    100%{
+        transform: translateX(400px) rotate(0deg);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translate(400px) rotate(0deg);
+    }
+    100% {
+      transform: translateX(0px) rotate(0deg);
+      
+    }
+  }
