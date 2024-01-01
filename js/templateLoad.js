@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     const footerContainer = document.createElement('div');
-    fetch('./footer.html')
+    fetch('/footer.html')
     .then(response => response.text())
     .then(html => {
         footerContainer.innerHTML = html;
