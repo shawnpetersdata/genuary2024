@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const headerContainer = document.createElement('div');
-    fetch('/header.html')
+    fetch('./header.html')
     .then(response => response.text())
     .then(html => {
         headerContainer.innerHTML = html;
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     const footerContainer = document.createElement('div');
-    fetch('/footer.html')
+    fetch('./footer.html')
     .then(response => response.text())
     .then(html => {
         footerContainer.innerHTML = html;
