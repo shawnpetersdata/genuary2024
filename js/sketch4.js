@@ -81,7 +81,7 @@ function drawImage(artwork, ) {
 
 function preload() {
     for (let i = 0; i<10; i++) {
-        artworks.push(loadImage(`resources/tinyart${i}.jpg`))
+        artworks.push(loadImage(`./resources/tinyart${i}.jpg`))
     } 
 }
 
