@@ -82,7 +82,16 @@ function drawImage(artwork, ) {
 function preload() {
     for (let i = 0; i<10; i++) {
         artworks.push(loadImage(`./resources/tinyart${i}.jpg`))
-    } 
+    }
+    console.log('blank')
+    loadImage(`resources/tinyart${i}.jpg`)
+    console.log('slash')
+    loadImage(`/resources/tinyart${i}.jpg`)
+    console.log('dot slash')
+    loadImage(`./resources/tinyart${i}.jpg`)
+    console.log('dot dot slash')
+    loadImage(`../resources/tinyart${i}.jpg`)
+
 }
 
 function setup() {
