@@ -1,6 +1,3 @@
-//images from Stephen "Redshrike" Challener
-//https://opengameart.org/content/3x-updated-32x32-scifi-roguelike-enemies
-
 let pixelW
 let pixelH
 let spacing
@@ -65,7 +62,6 @@ function drawImage(artwork, ) {
     
     artwork.loadPixels()
     for (let i = 0; i<artwork.pixels.length; i+=4) {
-    //for (let i = 0; i<5*4; i+=4) {
 
     const r = 100 * artwork.pixels[i] / 255
     console.log(r)
@@ -74,12 +70,9 @@ function drawImage(artwork, ) {
     pixels[i/4].setColor(r,g,b)
     }
 
-    //image(sprite,width-32,height-32)
-    
     for(let led of leds) {
         led.backlight()
     }
-    //filter(BLUR,2)
     for (let led of leds) {
         led.show()
     }
@@ -88,7 +81,7 @@ function drawImage(artwork, ) {
 
 function preload() {
     for (let i = 0; i<10; i++) {
-        artworks.push(loadImage(`/resources/tinyart${i}.jpg`))
+        artworks.push(loadImage(`resources/tinyart${i}.jpg`))
     } 
 }
 
