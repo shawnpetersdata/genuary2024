@@ -60,7 +60,7 @@ nav img, nav p {
 }
 
 .flipper img {
-    width: 300px;
+    width: min(80vh,300px);
     display:block;
     height:auto;
     margin: 0 auto;

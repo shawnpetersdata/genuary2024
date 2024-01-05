@@ -6,7 +6,8 @@ function shuffleArray(array) {
   }
 
   function animatePhoto(index) {
-    let element = sortedElements[index];
+    console.log(sortedElements)
+    let element = sortedElements[sortedElements.length-index-1];
     const storedRotation = element.dataset.rotation;
 
     let computedStyle = window.getComputedStyle(element);
@@ -49,8 +50,11 @@ function shuffleArray(array) {
   
 let elements = document.querySelectorAll('.rotated');
 
-const indexArray = Array.from({length:elements.length},(_, index) => index + 1);
+let indexArray = Array.from({length:elements.length},(_, index) => index + 1);
+
+console.log(indexArray)
 indexArray.reverse()
+console.log(indexArray)
 
 elements.forEach(function(element, index) {
     const rot = -20+Math.random()*40

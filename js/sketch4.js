@@ -64,7 +64,6 @@ function drawImage(artwork, ) {
     for (let i = 0; i<artwork.pixels.length; i+=4) {
 
     const r = 100 * artwork.pixels[i] / 255
-    console.log(r)
     const g = 100 * artwork.pixels[i+1] / 255
     const b = 100* artwork.pixels[i+2] / 255
     pixels[i/4].setColor(r,g,b)
@@ -83,15 +82,7 @@ function preload() {
     for (let i = 0; i<10; i++) {
         artworks.push(loadImage(`./resources/tinyart${i}.jpg`))
     }
-    console.log('blank')
-    loadImage(`resources/tinyart${i}.jpg`)
-    console.log('slash')
-    loadImage(`/resources/tinyart${i}.jpg`)
-    console.log('dot slash')
-    loadImage(`./resources/tinyart${i}.jpg`)
-    console.log('dot dot slash')
-    loadImage(`../resources/tinyart${i}.jpg`)
-
+    
 }
 
 function setup() {
@@ -99,10 +90,6 @@ function setup() {
     createCanvas(0.8*min(windowWidth, windowHeight),0.8*min(windowWidth, windowHeight))
     
     pixelW = width/196
-    console.log(pixelW)
-    //pixelW = 1.532
-    //pixelW = width*6/1345
-    //console.log(pixelW)
     pixelH = 3.03*pixelW
     spacing = pixelW*1.01
 
@@ -138,27 +125,11 @@ function setup() {
 }
 
 function draw() {
-    //noLoop()
     frameRate(1)
     if ((frameCount - 1)%10 == 0) {
         background(0)
         art = random(artworks)
         drawImage(art)
-        //image(art,0,0)
 
     }
-    
-    
-
-    //scale(scl, scl)
-    //noLoop()
-    //const count = (frameCount - 1) % leds.length
-    //leds[count].toggle()
-    //leds[count].show()
-   
-    
-    
-    
-
-    
 }
