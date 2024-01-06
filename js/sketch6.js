@@ -108,7 +108,7 @@ function showPast(limit) {
 }
 
 function preload() {
-    icon = loadImage("/resources/pc-warning.512x512.png")
+    icon = loadImage("./resources/pc-warning.512x512.png")
 }
 
 function setup() {
