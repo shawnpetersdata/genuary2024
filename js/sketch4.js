@@ -88,7 +88,7 @@ function preload() {
 function setup() {
     
     createCanvas(0.8*min(windowWidth, windowHeight),0.8*min(windowWidth, windowHeight))
-    
+    pixelDensity(1)
     pixelW = width/196
     pixelH = 3.03*pixelW
     spacing = pixelW*1.01

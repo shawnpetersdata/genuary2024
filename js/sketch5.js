@@ -60,6 +60,7 @@ function setup() {
     pens = [color(64,66,59),color(67,74,133),color(100,86,88),color(93,97,168), color(172,50,53)]
     createCanvas(0.8*min(windowWidth, windowHeight),0.8*min(windowWidth, windowHeight))
     gridSize = width / segments
+    pixelDensity(1)
     for (let i = 0; i<segments; i++) {
         for (let j = 0; j<segments; j++) {
             

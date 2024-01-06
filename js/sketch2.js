@@ -45,6 +45,7 @@ const wave = (loops) => {
 function setup() {
     createCanvas(min(windowWidth,windowHeight * 0.8), min(windowWidth,windowHeight *0.8));
     colorMode(HSB)
+    pixelDensity(1)
     main = random(0,360)
     saturation = random(40,100)
     brightness = random(60,80)

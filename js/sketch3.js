@@ -140,6 +140,8 @@ class Plane extends ThreeD {
 function setup() {
     let dim = min(0.8*windowWidth, 0.8*windowHeight)
     c = createCanvas(dim,dim, WEBGL)
+    pixelDensity(1)
+
     buffer = createGraphics(dim,dim,WEBGL)
     
     

@@ -49,7 +49,6 @@ class Particle {
         let vec = p5.Vector.fromAngle(noise(this.pos.x/10, this.pos.y/10, frameCount/100) * TWO_PI)
         vec.setMag(0.01)
         this.applyForce(vec)
-        //console.log(vec)
     }
 
     applyForce(force) {
@@ -78,6 +77,9 @@ function showCurrent() {
 
 function showPast(limit) {
     let past = 40
+    if(particles[0].history.length<limit) {
+        return
+    }
     for (let i = 4; i<limit; i+=10 ) {
         stroke(
             map(noise((frameCount - past)/1000+rOff),0,1,0,360),
@@ -108,7 +110,7 @@ function showPast(limit) {
 }
 
 function preload() {
-    icon = loadImage("./resources/pc-warning.512x512.png")
+    icon = loadImage(   "./resources/pc-warning.512x512.png")
 }
 
 function setup() {
