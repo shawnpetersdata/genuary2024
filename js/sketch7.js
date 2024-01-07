@@ -39,9 +39,18 @@ function getPixelInfo(arr) {
 function setup() {
     count = 0
     pixelDensity(1)
-    let scl = min((0.8*windowWidth)/baseImg.width,(0.8*windowWidth)/baseImg.width)
+    let scl
+    if (windowWidth / baseImg.width < windowHeight / baseImg.height) {
+        scl = 0.8*windowWidth / baseImg.width
+    }
+    else {
+        scl = 0.8*windowHeight / baseImg.height}
+    console.log(windowWidth, baseImg.width, windowWidth/ baseImg.width)
+    console.log(windowHeight, baseImg.height, windowHeight/ baseImg.height)
+    //scl = 0.8*min(windowWidth/baseImg.width,windowWidth/baseImg.width)
     w = scl*baseImg.width
     h = scl*baseImg.height
+    console.log(w,h)
     fillPattern = createGraphics(0.1 * w, h)
     fillPattern.pixelDensity(1)
     fillPattern.background('purple')
