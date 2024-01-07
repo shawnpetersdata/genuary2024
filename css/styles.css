@@ -61,7 +61,7 @@ nav img, nav p {
 
 .flipper img {
     width: min(80vh,300px);
-    display:block;
+    aspect-ratio: 1 / 1;    display:block;
     height:auto;
     margin: 0 auto;
     border: white solid 20px;
