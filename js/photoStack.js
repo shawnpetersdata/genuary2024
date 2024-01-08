@@ -6,7 +6,6 @@ function shuffleArray(array) {
   }
 
   function animatePhoto(index) {
-    console.log(sortedElements)
     let element = sortedElements[sortedElements.length-index-1];
     const storedRotation = element.dataset.rotation;
 
