@@ -130,8 +130,8 @@ function convolve(img, matrix, factor,kernelSize) {
 
 
 function preload() {
-    baseImg = loadImage('./resources/kristina-flour-BcjdbyKWquw-unsplash.jpg')
-    font = loadFont('./resources/TerminusTTFWindows-4.49.3.ttf')
+    baseImg = loadImage('/resources/kristina-flour-BcjdbyKWquw-unsplash.jpg')
+    font = loadFont('../resources/TerminusTTFWindows-4.49.3.ttf')
 }
 
 function setup(){
