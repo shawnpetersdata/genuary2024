@@ -70,16 +70,7 @@ class ASCII {
         }
     }
     show() {
-        /*
-        fill(this.color)
-
-        textSize(this.fontSize + map(noise(frameCount/100 + this.off),0,1,-2,2))
-        const x = (this.x + map(noise(this.x/100 + this.off, frameCount/100 + this.off), 0,1,-0.1*this.r, 0.1*this.r))*4
-        const y = (this.y + map(noise(this.y/100 + this.off, frameCount/100 + this.off), 0,1,-0.1*this.r, 0.1*this.r))*4
-        text(this.character,x,y)
-        */
-        
-        
+                
         buffer.fill(this.color)
 
         buffer.textSize(this.fontSize + map(noise(frameCount/100 + this.off),0,1,-2,2))
@@ -97,43 +88,10 @@ function inArray(arr, val) {
 
 
 
-    console.log(checker)
     
 }
 
-function compareColor(color1, color2, threshold = 1) {
-    const rAvg = 0.5 * (color1[0] + color2[0])
-    const rDiff = color2[0] - color1[0]
-    const gDiff = color2[1] - color1[1]
-    const bDiff = color2[2] - color1[2]
 
-    return ((2 + rAvg/256)*rDiff**2 + 4*gDiff**2 + 2*((255-rAvg)/256)*bDiff**2)**0.5
-}
-
-/*
-function regionSplit(img) {
-    let stored = []
-    let regions = []
-    img.resize(w/4, h/4)
-    img.loadPixels()
-    image(img,0,0)
-    for (let i = 1; i < img.width-1; i++) {
-        for (let j = 1; j < img.height-1; j++) {
-            const index = (i + j*img.width) * 4
-            let currentPixel = [img.pixels[i], img.pixels[i+1], img.pixels[i+2]]
-            let nextPixel = [img.pixels[i+4], img.pixels[i+5], img.pixels[i+6]]
-            noStroke()
-            if(compareColor(currentPixel, nextPixel) < 1) {
-                fill(0,100)
-            }
-            else {
-                fill(255,100)
-            }
-            rect(i*4,j*4,4,4)
-        }
-    }
-}
-*/
 function convolve(img, matrix, factor,kernelSize) {
     img.loadPixels()
     let result = []
@@ -172,8 +130,8 @@ function convolve(img, matrix, factor,kernelSize) {
 
 
 function preload() {
-    baseImg = loadImage('/resources/kristina-flour-BcjdbyKWquw-unsplash.jpg')
-    font = loadFont('/resources/TerminusTTFWindows-4.49.3.ttf')
+    baseImg = loadImage('./resources/kristina-flour-BcjdbyKWquw-unsplash.jpg')
+    font = loadFont('./resources/TerminusTTFWindows-4.49.3.ttf')
 }
 
 function setup(){
@@ -209,7 +167,6 @@ function setup(){
     baseImg.resize(baseImg.width/10,baseImg.height/10)
     createCanvas(w,h)
     
-    //edgeImg = baseImg.get() //temp. delete
 
     buffer.textFont(font);
     
@@ -241,15 +198,6 @@ function setup(){
         
     }
     edgeImg.updatePixels()
-/*    
-console.log(edgePoints.length)
-background(255)
-noStroke()
-fill(0,20)
-    for (let coord of edgePoints) {
-        circle(coord.x,coord.y, 5)
-    } 
-*/
     
     
     let coords = []
@@ -261,7 +209,6 @@ fill(0,20)
 
     }
 
-    //image(edgeImg,0,0)
     
     shuffle(coords,true)
     let growing = characters.filter((character) =>{return character.growing})
@@ -287,10 +234,8 @@ fill(0,20)
             || character.r > 100) {
                 character.growing = false
                 }
-            //character.growing = false
             }
         growing = characters.filter((character) =>{return character.growing})
-        //growing = []
 
         
         
@@ -301,8 +246,7 @@ fill(0,20)
         
     }
 
-    //background(255,150)
-    //regionSplit(baseImg)
+    
     
 }
 
