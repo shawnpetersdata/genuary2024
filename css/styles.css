@@ -24,9 +24,16 @@ nav {
     grid-template-columns:repeat(auto-fill, minmax(50px, 1fr));
     grid-gap: 10px;
     max-width: 85vw;
+    max-height: 15vh;
     margin: 0 auto;
     padding-bottom:0;
     background-color:var(--accent3);
+    overflow: hidden;
+}
+
+nav:hover {
+    max-height: 100vh;
+    overflow:visible;
 }
 
 canvas {
@@ -62,6 +69,11 @@ a {
     }
     
 }
+
+@media only screen and (min-width: 680px) and (max-width: 775px) {
+
+}
+
 
 .p5Canvas {
     padding: 0;
