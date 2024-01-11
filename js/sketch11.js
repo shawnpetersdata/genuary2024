@@ -158,7 +158,7 @@ class TriangleTile {
 }
 
 function preload() {
-    backdrop = loadImage("/resources/julie-fader-jA3V61YJMH0-unsplash.jpg")
+    backdrop = loadImage("./resources/julie-fader-jA3V61YJMH0-unsplash.jpg")
 }
 
 function setup() {
