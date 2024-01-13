@@ -31,9 +31,13 @@ nav {
     overflow: hidden;
 }
 
-nav:hover {
+.noMobile:hover {
     max-height: 100vh;
     overflow:visible;
+}
+
+nav.mobile-scroll {
+    overflow:scroll;
 }
 
 canvas {
