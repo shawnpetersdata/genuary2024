@@ -141,7 +141,7 @@ if (this.velocity.mag() < this.minSpeed) {
 }
 
 function preload() {
-    brain = loadModel("/resources/Brain_Model.obj") 
+    brain = loadModel("./resources/Brain_Model.obj") 
 }
 function setup() {
     palette = [
