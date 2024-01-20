@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genuary 2024 - Evolving Typography</title>
+    <script src="js/templateLoad.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href = "css/styles.css">
+</head>
+    <body>
+        <main>
+            <script src="js/sketch20.js"></script>
+        </main>
+        <section class = "description">
+            <h1> Genuary 20 - Evolving Typography</h1>
+            <p>Not knowing quite what generative typography would be, I watched an interesting talk by Lynne Yun. I decided try to merge the computer's understanding of a letter as a pointer based on its ascii / unicode value and my visual understanding of letters.</p>
+            <p>Using a genetic algorithm, the program tries to approximate the shape of the letter using only the character code for the letter. To make it more visually interesting, I layered the attempts.</p>
+            <p>This is fairly slow since there are many generations to process. I also had trouble with the flattened pixel array. No idea why it didn't work in this case, but I had to grab the pixels one by one, slowing it down further.</p>
+            
+        </section>
+    </body>
+</html>
