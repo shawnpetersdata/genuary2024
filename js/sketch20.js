@@ -105,8 +105,8 @@ class Agent {
 }
 
 function preload() {
-    fnt = loadFont('/resources/TerminusTTFWindows-4.49.3.ttf')
-    fnt2 = loadFont('/resources/DancingScript-VariableFont_wght.ttf')
+    fnt = loadFont('./resources/TerminusTTFWindows-4.49.3.ttf')
+    fnt2 = loadFont('./resources/DancingScript-VariableFont_wght.ttf')
 }
 function setBase(chr, canvas) {
     fntSize = 1
