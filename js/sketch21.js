@@ -7,7 +7,7 @@ let footpath
 
 function preload() {
     
-    footprint = loadModel('/resources/footprint.obj')
+    footprint = loadModel('./resources/footprint.obj')
 }
 
 function sunlight(angle) {
