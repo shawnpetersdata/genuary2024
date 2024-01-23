@@ -135,7 +135,7 @@ function customSort(a,b) {
 
 function preload() {
     const choice = Math.floor(random(9))
-    baseImg = loadImage(`/resources/tinyart${choice}.jpg`)
+    baseImg = loadImage(`./resources/tinyart${choice}.jpg`)
 }
 
 function setup() {
