@@ -151,7 +151,7 @@ class CustomGrid {
 }
 
 function setup() {
-    let dim = min(windowWidth, windowHeight)
+    let dim = 0.8*min(windowWidth, windowHeight)
     createCanvas(dim, dim);
     customGrid = new CustomGrid(20,20)
   }
