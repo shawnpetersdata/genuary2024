@@ -217,7 +217,7 @@ const ang = Math.PI/9
 let cooldown = 100
 
 function preload() {
-    bg = loadImage('/resources/annie-spratt-xTaOPMa6wAE-unsplash.jpg')
+    bg = loadImage('./resources/annie-spratt-xTaOPMa6wAE-unsplash.jpg')
 }
 
 function setup() {
