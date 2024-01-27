@@ -75,7 +75,7 @@ class Particle {
         }
 }
 function preload() {
-    code = loadStrings('sketch27.js')
+    code = loadStrings('js/sketch27.js')
 }
 function newLine(arr, index) {
     const spacing = 0.8*width / arr[index].length
