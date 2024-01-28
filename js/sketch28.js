@@ -102,10 +102,10 @@ function splitWithPunction(arr) {
 }
 
 function preload() {
-    book = loadStrings('/resources/sherlock.txt')
-    fnt = loadFont('/resources/SpecialElite-Regular.ttf')
-    brick = loadImage('/resources/jakob-braun-LmGT_iY-ykc-unsplash.jpg')
-    paper = loadImage('/resources/marjan-blan-ADfPdLBMeY8-unsplash.jpg')
+    book = loadStrings('./resources/sherlock.txt')
+    fnt = loadFont('./resources/SpecialElite-Regular.ttf')
+    brick = loadImage('./resources/jakob-braun-LmGT_iY-ykc-unsplash.jpg')
+    paper = loadImage('./resources/marjan-blan-ADfPdLBMeY8-unsplash.jpg')
 }
 
 function printLetter() {
