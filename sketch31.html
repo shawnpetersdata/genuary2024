@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genuary 31 - Plinko Music</title>
+    <script src="js/templateLoad.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <script src ="js/matter.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href = "css/styles.css">
+</head>
+    <body>
+        <main>
+            <script src="js/sketch31.js" defer></script>
+
+        </main>
+        <section class = "description">
+            <button id="startButton">Start Audio</button>
+
+            <h1> Genuary 31 - Plinko Music</h1>
+            
+            <p>What a journey! I had a wonderful Gibber setup, but the audio context wouldn't set up properly, so I told a deep dive into p5.sound.</p>
+            <p>Sections of sound are generated and played using noise to move up and down through the generated measures. Reverb is used to create an echo effect.</p>
+            <p>For extra fun, a plinko board is set up using matter.js to drop balls onto a visualizer. The FFT is used to create force to bounce the balls around.</p>
+
+        </section>
+    </body>
+</html>
